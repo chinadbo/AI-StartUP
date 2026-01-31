@@ -1,53 +1,59 @@
 # AI-StartUP
 
-AI Start Up - A repository for exploring AI technologies, news, and ideas
-
-## Overview
-
-This project serves as a hub for AI exploration, featuring:
-- Daily AI news summaries
-- Ideas and concepts for AI applications
-- Article analysis and insights
-- Technical discoveries and breakthroughs
-- Modern web dashboard for easy management
-
-## Structure
-
-- `ideas/` - Ideas and concepts for AI applications
-- `news/` - Daily AI news summaries
-- `daily_updates/` - Daily AI technology updates
-- `articles/` - Analysis of AI articles and papers
-- `scripts/` - Scripts for automating news gathering and analysis
-- `web/` - Modern web dashboard for managing content
+A modern, interactive AI news and innovation platform built with Next.js, Tailwind CSS, and TypeScript.
 
 ## Features
 
-- Automated daily AI news retrieval
-- Article summarization capabilities
-- Idea tracking and development
-- AI technology trend monitoring
-- Modern web interface with dashboard
+- **AI News Aggregation**: Automatically fetches the latest AI news daily
+- **Idea Management**: Capture, track, and develop AI concepts
+- **Article Analysis**: AI-powered analysis and summarization of articles
+- **Modern UI**: Sleek, responsive interface with dark mode support
+- **Automated Updates**: Scheduled content updates and deployments
 
-## Web Dashboard
+## Tech Stack
 
-The project includes a modern, tech-focused dashboard built with Next.js, Tailwind CSS, and shadcn-inspired components.
+- Next.js 14+ with App Router
+- TypeScript
+- Tailwind CSS
+- Lucide React icons
+- Node.js automation scripts
 
-### Accessing the Dashboard
+## Quick Start
 
-To run the dashboard locally:
-1. Navigate to the web directory: `cd web`
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
-4. Visit `http://localhost:3000` in your browser
+1. Install dependencies:
+```bash
+npm install
+```
 
-### Deploying to GitHub Pages
+2. Build the application:
+```bash
+npm run build
+```
 
-The dashboard is configured for static export to GitHub Pages:
-1. Run the build script: `./build-for-gh-pages.sh`
-2. Push the contents of the `out` directory to your `gh-pages` branch
+3. The built site will be in the `/docs` directory
 
-## Scripts
+## Automation Scripts
 
-- `scripts/daily_news_fetcher.js` - Creates daily news files
-- `scripts/article_summarizer.js` - Creates templates for article summaries
-- `scripts/setup_cron.sh` - Sets up the daily cron job
+- `npm run build`: Build the application
+- `node scripts/startup.mjs`: Run the full automation pipeline
+- `node scripts/fetch-ai-news.mjs`: Fetch latest AI news
+- `node scripts/analyze-article.mjs "content" "title"`: Analyze a user-submitted article
+
+## Deployment
+
+The site is configured for GitHub Pages deployment using the `/docs` directory as the source.
+
+## Directory Structure
+
+- `/app` - Next.js app router pages
+- `/content` - Fetched news, articles, and ideas
+- `/scripts` - Automation scripts
+- `/docs` - Generated static site (deployed to GitHub Pages)
+
+## Automation
+
+The platform includes automation for:
+1. Daily news fetching at 8 AM
+2. Content processing and analysis
+3. Automatic site rebuilds when new content is added
+4. Deployment to GitHub Pages

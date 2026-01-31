@@ -1,46 +1,60 @@
-# AI-StartUP Usage Guide
+# Usage Guide
 
-## Overview
+## Development
 
-This project is designed to help you track AI developments, record ideas, and summarize articles.
-
-## Directory Structure
-
-- `ideas/` - Store and develop AI-related ideas
-- `news/` - Daily AI news summaries (automatically generated)
-- `daily_updates/` - Manual daily updates and observations
-- `articles/` - Summaries of articles you've read
-- `scripts/` - Automation scripts
-
-## Daily News Automation
-
-The system automatically creates a new news file each day at 8:00 AM. To set this up:
-
-1. Run the setup script: `./scripts/setup_cron.sh`
-
-## Adding Ideas
-
-To add a new idea, create a file in the `ideas/` directory using the template provided in `ideas/template.md`.
-
-## Summarizing Articles
-
-To create a summary for an article:
-
+1. Install dependencies:
 ```bash
-node scripts/article_summarizer.js <url> [title]
+npm install
 ```
 
-Example:
+2. Run development server:
 ```bash
-node scripts/article_summarizer.js https://example.com/ai-article "New AI Breakthrough"
+npm run dev
 ```
 
-## Manual Daily Updates
+3. Visit `http://localhost:3000`
 
-Create a file in `daily_updates/` with the date in the filename (e.g., `2026-01-31.md`) to record your daily AI observations.
+## Production
 
-## Scripts
+1. Build the application:
+```bash
+npm run build
+```
 
-- `daily_news_fetcher.js` - Creates daily news files
-- `article_summarizer.js` - Creates templates for article summaries
-- `setup_cron.sh` - Sets up the daily cron job
+2. The built site will be in the `/docs` directory
+
+## Automation Scripts
+
+### Fetch Daily AI News
+```bash
+node scripts/fetch-ai-news.js
+```
+
+### Analyze an Article
+```bash
+node scripts/analyze-article.js "Article content here" "Article Title"
+```
+
+### Process User Article
+```bash
+node scripts/process-user-article.js "Article content" "Title"
+```
+
+### Run Full Automation Pipeline
+```bash
+node scripts/auto-deploy.js
+```
+
+### Setup Daily Tasks
+The system is configured to run daily at 8 AM, fetching new AI news and rebuilding the site.
+
+## Content Management
+
+All content is stored in the `/content` directory:
+- `/content/news` - Daily fetched AI news
+- `/content/articles` - Analyzed user articles
+- `/content/ideas` - Captured AI ideas
+
+## GitHub Pages Deployment
+
+The site is configured to deploy to GitHub Pages using the `/docs` directory as the source.
