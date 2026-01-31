@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
   trailingSlash: true, // Add trailing slashes to URLs for better GitHub Pages compatibility
   images: {
     unoptimized: true // Required for static exports
+  },
+  basePath: '/AI-StartUP', // Important: Set the base path for GitHub Pages subdirectory
+  assetPrefix: '/AI-StartUP/', // Ensure assets are loaded from correct path
+  env: {
+    BASE_PATH: '/AI-StartUP'
   }
 };
 
