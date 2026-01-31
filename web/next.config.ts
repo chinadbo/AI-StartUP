@@ -1,17 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export', // This enables static export for GitHub Pages
-  trailingSlash: true, // Add trailing slashes to URLs for better GitHub Pages compatibility
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true // Required for static exports
+    unoptimized: true
   },
-  basePath: '/AI-StartUP', // Important: Set the base path for GitHub Pages subdirectory
-  assetPrefix: '/AI-StartUP/', // Ensure assets are loaded from correct path
-  env: {
-    BASE_PATH: '/AI-StartUP'
-  }
+  // 使用相对路径而不是绝对路径
+  assetPrefix: './',
 };
 
 export default nextConfig;
