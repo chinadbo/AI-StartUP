@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: './',
+  assetPrefix: '/AI-StartUP/',
 }
 
 export default nextConfig

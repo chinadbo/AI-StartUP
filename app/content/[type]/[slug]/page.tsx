@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getContentBySlug, ContentItem, ContentType } from '@/lib/content-loader';
+import { getContentBySlug, ContentItem, ContentType, getAllContent } from '@/lib/content-loader';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
@@ -33,6 +33,20 @@ interface Params {
 
 interface Props {
   params: Promise<Params>;
+}
+
+export async function generateStaticParams() {
+  const types: ContentType[] = ['articles', 'ideas', 'news', 'notes'];
+  const params: { type: string; slug: string }[] = [];
+
+  for (const type of types) {
+    const contents = await getAllContent(type);
+    for (const content of contents) {
+      params.push({ type, slug: content.slug });
+    }
+  }
+
+  return params;
 }
 
 export default async function ContentPage({ params }: Props) {
