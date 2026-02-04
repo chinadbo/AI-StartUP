@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "New AI Model Surpasses Human Performance in Complex Reasoning Tasks",
+    "summary": "Researchers have developed a new AI model that demonstrates superior performance in complex reasoning tasks, outperforming human experts in controlled tests.",
+    "date": "2026-02-02",
+    "source": "AI Research Journal",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "title": "Global AI Ethics Framework Gains Momentum",
+    "summary": "International consortium including major governments announces new collaborative effort to establish unified ethical standards for AI development and deployment.",
+    "date": "2026-02-02",
+    "source": "Tech Ethics Review",
+    "url": "#"
+  },
+  {
+    "id": 3,
+    "title": "Computer Vision AI New Accuracy Milestone",
+    "summary": "Advanced computer vision system demonstrates unprecedented ability to recognize and classify objects in challenging lighting conditions and occluded environments.",
+    "date": "2026-02-02",
+    "source": "Vision AI Quarterly",
+    "url": "#"
+  },
+  {
+    "id": 4,
+    "title": "AI-Driven Drug Discovery Pipeline Yields Promising Results",
+    "summary": "Pharmaceutical companies report accelerated clinical trial timelines using AI-assisted molecular design and patient selection processes.",
+    "date": "2026-02-02",
+    "source": "BioTech Today",
+    "url": "#"
+  },
+  {
+    "id": 5,
+    "title": "Specialized AI Chip Architecture for Enhanced Efficiency",
+    "summary": "New hardware design specifically optimized for AI workloads promises significant improvements in energy efficiency and processing speed.",
+    "date": "2026-02-02",
+    "source": "Hardware Innovations",
+    "url": "#"
+  },
+  {
+    "id": 6,
+    "title": "Regulatory Bodies Address Generative AI Concerns",
+    "summary": "Multiple government agencies release new regulatory approaches to address the challenges posed by rapidly advancing generative AI technologies.",
+    "date": "2026-02-02",
+    "source": "Policy Watch",
+    "url": "#"
+  },
+  {
+    "id": 7,
+    "title": "Multimodal AI Systems New Performance Benchmarks",
+    "summary": "AI systems capable of processing multiple sensory inputs simultaneously achieve new levels of human-like understanding and response.",
+    "date": "2026-02-02",
+    "source": "AI Benchmark Report",
+    "url": "#"
+  },
+  {
+    "id": 8,
+    "title": "AI Models Improve Prediction Capabilities",
+    "summary": "Advanced AI algorithms enhance climate modeling precision by incorporating vast amounts of environmental data and complex variable interactions.",
+    "date": "2026-02-02",
+    "source": "Climate Science Today",
+    "url": "#"
+  },
+  {
+    "id": 9,
+    "title": "Robotic AI Models Demonstrate Versatility",
+    "summary": "General-purpose AI systems adapted for robotics show remarkable adaptability across diverse physical manipulation tasks and environments.",
+    "date": "2026-02-02",
+    "source": "Robotics Weekly",
+    "url": "#"
+  },
+  {
+    "id": 10,
+    "title": "AI Security Research Uncovers Attack Vectors",
+    "summary": "Cybersecurity researchers identify sophisticated methods for exploiting vulnerabilities in transformer-based AI models and propose mitigation strategies.",
+    "date": "2026-02-02",
+    "source": "Cybersecurity Review",
+    "url": "#"
+  }
+]

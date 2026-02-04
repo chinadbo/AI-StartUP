@@ -1,59 +1,116 @@
-# AI-StartUP
+# AI-StartUP Knowledge Hub
 
-A modern, interactive AI news and innovation platform built with Next.js, Tailwind CSS, and TypeScript.
+A modern web application for managing and displaying markdown content organized into articles, ideas, news, and notes.
 
 ## Features
 
-- **AI News Aggregation**: Automatically fetches the latest AI news daily
-- **Idea Management**: Capture, track, and develop AI concepts
-- **Article Analysis**: AI-powered analysis and summarization of articles
-- **Modern UI**: Sleek, responsive interface with dark mode support
-- **Automated Updates**: Scheduled content updates and deployments
+- **Content Management**: Organize your knowledge into 4 categories (articles, ideas, news, notes)
+- **Modern Tech Stack**: Built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui
+- **Markdown Support**: Write content in markdown with frontmatter metadata
+- **Responsive Design**: Works on desktop and mobile devices
+- **Static Export**: Builds to static files in `/docs` directory
 
-## Tech Stack
+## Project Structure
 
-- Next.js 14+ with App Router
-- TypeScript
-- Tailwind CSS
-- Lucide React icons
-- Node.js automation scripts
+- `/content/articles` - In-depth analytical pieces
+- `/content/ideas` - Creative concepts and proposals
+- `/content/news` - Latest updates and developments
+- `/content/notes` - Personal observations and thoughts
+- `/app` - Next.js app router pages
+- `/components/ui` - Reusable UI components
+- `/lib` - Utility functions
 
-## Quick Start
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Build the application:
+2. Start development server:
 ```bash
-npm run build
+npm run dev
 ```
 
-3. The built site will be in the `/docs` directory
+3. Visit `http://localhost:3000` in your browser
 
-## Automation Scripts
+### Building for Production
 
-- `npm run build`: Build the application
-- `node scripts/startup.mjs`: Run the full automation pipeline
-- `node scripts/fetch-ai-news.mjs`: Fetch latest AI news
-- `node scripts/analyze-article.mjs "content" "title"`: Analyze a user-submitted article
+To build the static site:
+
+```bash
+npm run export
+```
+
+The built site will be available in the `/docs` directory, ready to be deployed to any static hosting service.
+
+## Adding Content
+
+Content is stored as markdown files in the respective directories under `/content`. Each file should include frontmatter metadata:
+
+```markdown
+---
+title: "Your Content Title"
+date: "2026-01-01"
+excerpt: "Brief description of the content"
+category: "Category Name"
+tags: ["tag1", "tag2"]
+author: "Your Name"
+readTime: "5 min read"
+---
+
+Your content goes here...
+
+## Section Title
+
+You can use all standard markdown features:
+
+- Lists
+- **Bold text**
+- [Links](https://example.com)
+- Code blocks
+
+```js
+console.log('Hello, world!');
+```
+
+```
+
+## Content Analysis
+
+To analyze and add new content from an external source, use the content analysis script:
+
+```bash
+# Create a temporary file with your content
+echo "Your article content here..." > temp_content.md
+
+# Analyze and add to the appropriate category
+node scripts/analyze-content.js articles "Article Title" temp_content.md
+```
+
+## Customization
+
+- Modify `/app/page.tsx` to customize the homepage
+- Add new components to `/components/ui` 
+- Adjust styling in `/app/globals.css` and `/tailwind.config.mjs`
 
 ## Deployment
 
-The site is configured for GitHub Pages deployment using the `/docs` directory as the source.
+The project builds to static files in the `/docs` directory which can be deployed to:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting service
 
-## Directory Structure
+Simply run `npm run export` and deploy the contents of the `/docs` folder.
 
-- `/app` - Next.js app router pages
-- `/content` - Fetched news, articles, and ideas
-- `/scripts` - Automation scripts
-- `/docs` - Generated static site (deployed to GitHub Pages)
+## License
 
-## Automation
-
-The platform includes automation for:
-1. Daily news fetching at 8 AM
-2. Content processing and analysis
-3. Automatic site rebuilds when new content is added
-4. Deployment to GitHub Pages
+MIT
